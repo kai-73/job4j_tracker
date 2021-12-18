@@ -8,7 +8,6 @@ public class DummyDic {
 
     public static void main(String[] args) {
         DummyDic word = new DummyDic();
-        //String say = word.engToRus("abracadabra.");
         System.out.println(word.engToRus("abracadabra"));
     }
 }
