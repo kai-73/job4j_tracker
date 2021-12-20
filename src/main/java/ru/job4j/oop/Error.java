@@ -25,8 +25,10 @@ public class Error {
         Error error1 = new Error(true, 404, "Not Found");
         Error error2 = new Error(false, 500, "Internal Server Error");
         Error error3 = new Error(true, 200, "Ok");
+        Error error4 = new Error();
         error1.show();
         error2.show();
         error3.show();
+        error4.show();
     }
 }
