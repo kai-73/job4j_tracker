@@ -1,6 +1,7 @@
 /**
  * @Раздел Блок 2. ООП / 1.2.1. Классы и объекты.
  * @Задание 2.1. Рефакторинг - Расстояние между точками. [#122587]
+ * 4. Расстояние между точками в трехмерном пространстве. [#122643]
  * @Описание Давайте вернемся к заданию "расстояние между точками в системе координат".
  * В этом задании мы перепишем код в классе Point таким образом,
  * чтобы он стал использовать объекты.
@@ -14,27 +15,33 @@ package ru.job4j.condition;
 import static java.lang.Math.*;
 
 public class Point {
-    private int x, y;
+    private int x, y, z;
 
     public Point(int first, int second) {
         this.x = first;
         this.y = second;
     }
 
-    public double distance(Point that) {
+    public Point(int one, int two, int three) {
+        this.x = one;
+        this.y = two;
+        this.z = three;
+
+    }
+
+    public double distance3d(Point that) {
         return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
+    public double distance(Point that) {
+        return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2) + pow(this.z - that.z, 2));
+    }
+
       public static void main(String[] args) {
-        Point a = new Point(0, 0);
-        Point b = new Point(0, 2);
-        Point c = new Point(2, 2);
-        double ab = a.distance(b);
-        double ac = a.distance(c);
-        double bc = b.distance(c);
-        System.out.println("ab: " + ab + " ac: " + ac + " bc: " + bc);
-        double per = (ab + ac + bc) / 2;
-        System.out.println("Полупериметр = " + per);
-        System.out.println("Площадь треугольника = " + sqrt(per * (per - ab) * (per - ab) * (per - bc)));
+        Point a = new Point(0, 0, 0);
+        Point b = new Point(1, 1, 1);
+        double dist = a.distance(b);
+        System.out.println(dist);
+
     }
 }
