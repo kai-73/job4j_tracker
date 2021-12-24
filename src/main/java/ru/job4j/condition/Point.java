@@ -10,7 +10,7 @@
  * @since 24.12.2021
  * @version 1
  */
-package ru.job4j.oop;
+package ru.job4j.condition;
 import static java.lang.Math.*;
 
 public class Point {
@@ -22,12 +22,19 @@ public class Point {
     }
 
     public double distance(Point that) {
-        return sqrt(pow(that.x - this.x, 2) + pow(that.y - this.y, 2));
+        return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
     }
 
-    public static void main(String[] args) {
+      public static void main(String[] args) {
         Point a = new Point(0, 0);
         Point b = new Point(0, 2);
-        System.out.println(a.distance(b));
+        Point c = new Point(2, 2);
+        double ab = a.distance(b);
+        double ac = a.distance(c);
+        double bc = b.distance(c);
+        System.out.println("ab: " + ab + " ac: " + ac + " bc: " + bc);
+        double per = (ab + ac + bc) / 2;
+        System.out.println("Полупериметр = " + per);
+        System.out.println("Площадь треугольника = " + sqrt(per * (per - ab) * (per - ab) * (per - bc)));
     }
 }
