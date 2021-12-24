@@ -16,7 +16,7 @@
  * Обратите внимание, что для вызова нестатических методов необходимо создавать экземпляр класса.
  * @author Oleg Romanov
  * @since 23.12.2021
- * @version 1
+ * @version 2
  */
 package ru.job4j.oop;
 
@@ -48,9 +48,7 @@ public class Calculator {
         Calculator calculator = new Calculator();
         System.out.println(calculator.multiply(5));
         System.out.println(minus(1));
-        Calculator calculator1 = new Calculator();
-        System.out.println(calculator1.divide(20));
-        Calculator calculator2 = new Calculator();
-        System.out.println(calculator2.sumAllOperation(3));
+        System.out.println(calculator.divide(20));
+        System.out.println(calculator.sumAllOperation(3));
     }
 }
