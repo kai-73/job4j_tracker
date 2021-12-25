@@ -20,6 +20,11 @@ public class Triangle {
     public boolean exist(double ab, double ac, double bc) {
         return ab + ac > bc && ac + bc > ab && ab + bc > ac;
     }
+    /**
+    public boolean proverka(Point a, Point b, Point c) {
+        return (c.x - a.x) / (b.x - a.x) != (c.y - a.y) / (b.y - a.y);
+    }
+    **/
 
     public double area() {
         double result = -1;
