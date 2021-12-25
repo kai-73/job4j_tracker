@@ -26,13 +26,7 @@ public class Point {
         this.x = one;
         this.y = two;
         this.z = three;
-
     }
-    /**
-    public boolean proverka(Point a, Point b, Point c) {
-        return (c.x - a.x) / (b.x - a.x) != (c.y - a.y) / (b.y - a.y);
-    }
-    **/
 
     public double distance(Point that) {
         return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2));
@@ -41,14 +35,4 @@ public class Point {
     public double distance3d(Point that) {
         return sqrt(pow(this.x - that.x, 2) + pow(this.y - that.y, 2) + pow(this.z - that.z, 2));
     }
-/**
-      public static void main(String[] args) {
-        Point a = new Point(0, 0);
-        Point b = new Point(1, 0);
-        Point c = new Point(-1, 0);
-        double dist = a.distance(b);
-        System.out.println(dist);
-
-    }
- **/
 }
