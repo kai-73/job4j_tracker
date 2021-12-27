@@ -12,8 +12,7 @@ public class Item {
         this.id = id;
     }
 
-    public Item(int id, String name) {
-        this.id = id;
+    public Item(String name) {
         this.name = name;
     }
 
