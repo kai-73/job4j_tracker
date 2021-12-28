@@ -1,6 +1,6 @@
 package ru.job4j.condition;
 
-import ru.job4j.condition.Point;
+//import ru.job4j.condition.Point;
 
 public class Triangle {
     private Point first;
@@ -17,20 +17,31 @@ public class Triangle {
         return (a + b + c) / 2;
     }
 
+    public boolean degenerate(Point first, Point second, Point third) {
+       int rsl = (first.getX() - third.getX()) * (second.getY() - third.getY()) - (second.getX() - third.getX()) * (first.getY() - third.getY());
+       int a = first.getX() - third.getX();
+       int b = second.getY() - third.getY();
+       int c = a * b;
+       int d = second.getX() - third.getX();
+       int e = first.getY() - third.getY();
+       int f = d * e;
+       int h = c - f;
+       return  rsl != 0;
+    }
+
     public boolean exist(double ab, double ac, double bc) {
         return ab + ac > bc && ac + bc > ab && ab + bc > ac;
     }
 
     public double area() {
-        double result = -1;
         double ab = first.distance(second);
         double ac = first.distance(third);
         double bc = second.distance(third);
         System.out.println("ab: " + ab + ", ac: " + ac + ", bc: " + bc);
-        if (this.exist(ab, ac, bc)) {
+        if (this.exist(ab, ac, bc) && this.degenerate(this.first, second, third)) {
             double per = semiPerimetr(ab, ac, bc);
             return Math.sqrt(per * (per - ab) * (per - ab) * (per - bc));
         }
-        return result;
+        return -1;
     }
 }

@@ -22,6 +22,14 @@ public class Point {
         this.y = second;
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
     public Point(int one, int two, int three) {
         this.x = one;
         this.y = two;
