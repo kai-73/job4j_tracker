@@ -1,4 +1,4 @@
-package ru.job4j.inheritance;
+package ru.job4j.inheritance1;
 
 public class Surgeon extends Doctor {
     private String category;

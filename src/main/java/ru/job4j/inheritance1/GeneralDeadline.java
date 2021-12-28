@@ -1,4 +1,4 @@
-package ru.job4j.inheritance;
+package ru.job4j.inheritance1;
 
 public class GeneralDeadline {
     public static String day = "1.01.2022";
