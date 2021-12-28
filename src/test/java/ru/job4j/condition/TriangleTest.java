@@ -1,3 +1,6 @@
+/**
+ * Добавлен последние 4 теста, для случая вырожденного треуголника.
+ */
 package ru.job4j.condition;
 
 import org.junit.Assert;
