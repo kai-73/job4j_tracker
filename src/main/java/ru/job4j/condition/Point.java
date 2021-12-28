@@ -15,7 +15,9 @@ package ru.job4j.condition;
 import static java.lang.Math.*;
 
 public class Point {
-    private int x, y, z;
+    private int x;
+            int y;
+            int z;
 
     public Point(int first, int second) {
         this.x = first;
