@@ -9,7 +9,7 @@
  * У нас есть класс с методом, который вычисляет расстояние по точкам x1 x2 y1 y2.
  * @author Oleg Romanov
  * @since 24.12.2021
- * @version 1
+ * @version 2
  */
 package ru.job4j.condition;
 import static java.lang.Math.*;

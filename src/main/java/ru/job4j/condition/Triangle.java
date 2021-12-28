@@ -1,3 +1,14 @@
+/**
+ * @Раздел Блок 2. ООП / 1.2.1. Классы и объекты.
+ * @Задание 2.1. 2.2. Рефакторинг - Площадь треугольника. [#122642 #243677]
+ * @Описание Программа для вычисления площади треугольника в стиде ООПю
+ * Добавлен дополнительный метод, в котором проверяется условие, что точки не лежат на одной
+ * прямой. в отличие оь освной конвы, в этом методе мы оперируем координатами точек труголника,
+ * получаем координаты посредством геттеров в классе Point/
+ * @author Oleg Romanov
+ * @since 24.12.2021
+ * @version 2
+ */
 package ru.job4j.condition;
 
 public class Triangle {
@@ -17,13 +28,6 @@ public class Triangle {
 
     public boolean degenerate(Point first, Point second, Point third) {
        int rsl = (first.getX() - third.getX()) * (second.getY() - third.getY()) - (second.getX() - third.getX()) * (first.getY() - third.getY());
-       int a = first.getX() - third.getX();
-       int b = second.getY() - third.getY();
-       int c = a * b;
-       int d = second.getX() - third.getX();
-       int e = first.getY() - third.getY();
-       int f = d * e;
-       int h = c - f;
        return  rsl != 0;
     }
 
