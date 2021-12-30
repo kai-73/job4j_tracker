@@ -14,7 +14,8 @@ package ru.job4j.inheritance;
 public class ReportUsage {
 
     public static void main(String[] args) {
-        JSONReport report = new JSONReport();
+        JSONReport reportJSON = new JSONReport();
+        HtmlReport report = new HtmlReport();
         String text = report.generate("Oleg", "body");
         System.out.println(text);
     }

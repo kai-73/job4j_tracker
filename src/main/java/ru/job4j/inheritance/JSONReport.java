@@ -1,6 +1,6 @@
 /**
  * @Раздел Блок 2. ООП / 1.2.2. Наследование.
- * @Задание 3. Перегрузить метод max для трех чисел [#122644]
+ * @Задание 5. Аннотация @Override [#174891]
  * @Описание 1. Создайте класс JSONReport. Он должен наследоваться от TextReport.
  * Для переноса строки используйте метод System.lineSeparator().
  * Здесь символ \t означает табуляцию, т.е. отступ от начала строки.
@@ -12,6 +12,7 @@
 package ru.job4j.inheritance;
 
 public class JSONReport extends TextReport {
+    @Override
     public String generate(String name, String body) {
         return "{" + System.lineSeparator()
                 + "\t\"name\" : " + "\"" + name + "\"," + System.lineSeparator()
