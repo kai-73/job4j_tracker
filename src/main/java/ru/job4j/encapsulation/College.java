@@ -6,8 +6,6 @@ import java.util.GregorianCalendar;
 public class College {
     public static void main(String[] args) {
         Student student = new Student();
-        Calendar calendar = new GregorianCalendar(2021, 8, 25);
-        Date date = calendar.getTime();
         student.setFullName("Romanov Oleg Anatolievich");
         student.setStudentGroup(2201);
         student.setReceipt(new Date());
