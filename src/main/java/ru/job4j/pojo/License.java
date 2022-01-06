@@ -9,6 +9,13 @@ public class License {
     private String code;
     private Date created;
 
+    public License(String code) {
+        this.code = code;
+    }
+
+    public License() {
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
