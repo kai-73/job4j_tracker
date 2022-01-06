@@ -6,11 +6,20 @@ import org.junit.Test;
 public class LicenseTest {
 
     @Test
-    public void eqName() {
+    public void eqCode() {
         License first = new License();
-        first.setCode("audio");
+        first.setCode("audi");
         License second = new License();
-        second.setCode("audio");
+        second.setCode("audi");
+        Assert.assertEquals(first, second);
+    }
+
+    @Test
+    public void eqOwner() {
+        License first = new License();
+        first.setOwner("Romanov Oleg");
+        License second = new License();
+        second.setOwner("Romanov Oleg");
         Assert.assertEquals(first, second);
     }
 }
