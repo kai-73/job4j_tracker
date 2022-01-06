@@ -14,7 +14,7 @@ public class License {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()) {
+        if (o == null || getClass() != o.getClass())  {
             return false;
         }
         License license = (License) o;
