@@ -81,9 +81,9 @@ public class Tracker {
     }
 
     /**
-     * Первоначально нам нужно найти ячейку с id приходящем в параметре.
+     * Первоначально нам нужно найти ячейку с id приходящим в параметр метода.
      * Мы уже реализовали методы для поиска по id, но этот метод возвращает объект Item, а не index.
-     * Давайте создадим новый метод, который будет возвращать index по id.
+     * Давайте создадим новый метод, который будет возвращать index ячейки массива (заявки) по id.
      */
 
     private int indexOff(int id) {
@@ -121,6 +121,31 @@ public class Tracker {
         if (index != -1) {
             item.setId(id);
             items[index] = item;
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Метод удаления заявки. Так как мы не можем изменять размер массива, под удалением понимается
+     * запись в ячейку массива нулевой ссылки - null.
+     * Здесь мы используем ранее созданный метод indexOff, который возвращает нам индекс эелемента
+     * массива по входному параметру метода- Id.
+     * int index = indexOff(id);
+     * int start = index + 1;
+     * int length = size - index - 1;
+     * System.arraycopy(items, start, items, index, length) - в самом коде все сокращено.
+     * Оставлено только int index - для читабельсности.
+     * @param id - Id удаляемой заявки.
+     * @return true - при удачном удалении.
+     */
+
+    public boolean delete(int id) {
+        int index = indexOff(id);
+        if (index != -1) {
+            System.arraycopy(items, index + 1, items, index, size - index - 1);
+            items[size - 1] = null;
+            size--; /* уменьшаем size, т.к. последняя ячейка  - null. */
             return true;
         }
         return false;
