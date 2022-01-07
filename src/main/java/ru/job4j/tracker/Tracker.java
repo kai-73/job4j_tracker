@@ -133,7 +133,7 @@ public class Tracker {
      * массива по входному параметру метода- Id.
      * int index = indexOff(id);
      * int start = index + 1;
-     * int length = size - index - 1;
+     * int length = size - index - 1; "-1" - так как size при заполненном массиве всегда size++.
      * System.arraycopy(items, start, items, index, length) - в самом коде все сокращено.
      * Оставлено только int index - для читабельсности.
      * @param id - Id удаляемой заявки.
