@@ -1,7 +1,6 @@
 package ru.job4j.tracker;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 public class Tracker {
     /**
@@ -30,15 +29,20 @@ public class Tracker {
      * @return - возвращает объект - заявку.
      */
     public Item findById(int id) {
-        Item rsl = null;
+        /* Item rsl = null;
         for (int index = 0; index < size; index++) {
             Item item = items[index];
             if (item.getId() == id) {
                 rsl = item;
                 break;
             }
-        }
+
         return rsl;
+        упрощаем этот метод путем применения метода indexOff */
+        /* находим индекс */
+        int index = indexOff(id);
+        /* Если индекс найден, то возвращаем объект item, иначе null */
+        return index != -1 ? items[index] : null;
     }
 
     /**
@@ -74,5 +78,51 @@ public class Tracker {
             }
         }
         return Arrays.copyOf(rsl, count);
+    }
+
+    /**
+     * Первоначально нам нужно найти ячейку с id приходящем в параметре.
+     * Мы уже реализовали методы для поиска по id, но этот метод возвращает объект Item, а не index.
+     * Давайте создадим новый метод, который будет возвращать index по id.
+     */
+
+    private int indexOff(int id) {
+        int rsl = -1;
+        for (int index = 0; index < size; index++) {
+            Item item = items[index];
+            /* можно обойтись без создания временного объекта, путем- if(items.getId() == id)*/
+            if (item.getId() == id) {
+                rsl = index;
+                break;
+            }
+        }
+        return rsl;
+    }
+
+    /**
+     * Весь метод replace будет состоять из 5-6 строчек кода.
+     * 1. Найти индекс ячейки по id.
+     *
+     * 2. Проставить id с item. При замене нужно сохранять старый id." - добавьте сеттер.
+     * И слово "сохранять" в контексте имеет смысл - "использовать".
+     * <p>
+     * 3. Записать в ячейку с найденным индексом объект item.
+     * Это входящий параметр." - подсказка - см. поля с типом Item.
+     * <p>
+     * 4. Вернуть true, если замена произведена или false, если index по id не найден.
+     *
+     * @param id   Это Id искомой заявки
+     * @param item - объект/заявка, которую необходимо вставить
+     * @return возвращает true, при успешном завершении операции
+     */
+
+    public boolean replace(int id, Item item) {
+        int index = indexOff(id);
+        if (index != -1) {
+            item.setId(id);
+            items[index] = item;
+            return true;
+        }
+        return false;
     }
 }
