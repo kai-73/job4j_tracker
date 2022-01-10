@@ -11,7 +11,7 @@ public class Matches {
         int count = 11;
         while (count > 0) {
             String player = turn ? "Первый игрок " : "Второй игрок ";
-            System.out.println(player + "введите число от 1 до 3: ");
+            System.out.println(player + " введите число от 1 до 3: ");
             int matches = input.nextInt();
             if (controlOfRules(matches, count)) {
                 count = outputMatchesLeft(count, matches);
