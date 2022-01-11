@@ -9,7 +9,8 @@ public class StartUI {
         while (run) {
             showMenu();
             System.out.print("Select: ");
-            int select = Integer.parseInt(scanner.nextLine());
+            int select = scanner.nextInt();
+            scanner.nextLine(); /* баг java. необходимо вставить после nextInt, иначе проскакивает следующий nextLine */
             if (select == 0) {
                 System.out.println("=== Create a new Item ===");
                 System.out.println("Enter name: ");
@@ -25,8 +26,21 @@ public class StartUI {
                         System.out.println(item);
                     }
                 } else {
-                    System.out.println("Хранлище еще не содержит заявок.");
+                    System.out.println("Хранилище еще не содержит заявок.");
                 }
+            } else if (select == 2) {
+                System.out.println("=== Edit item ===");
+                System.out.println("Enter id");
+                int id = Integer.parseInt(scanner.nextLine());
+                System.out.println("Enter name: ");
+                String name = scanner.nextLine();
+                Item item = new Item(name);
+                if (tracker.replace(id, item)) {
+                    System.out.println("Заявка изменена успешно.");
+                } else {
+                    System.out.println("Ошибка замены заявки.");
+                }
+
             } else if (select == 6) {
                 run = false;
             }
