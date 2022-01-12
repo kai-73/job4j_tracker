@@ -1,7 +1,7 @@
 
 package ru.job4j.oop;
 
-public class PrivedenieTipov {
+public class CastTypes {
     public static void main(String[] args) {
         /* создаем объекта класса Car. */
         /*Car car = new Car(); */
@@ -16,7 +16,7 @@ public class PrivedenieTipov {
 
         /* Ошибка в приведении типа. */
         /* Object bicycle = new Bicycle(); */
-        /* Car cb = (Car) bicycle; // код завершится с ошибок приведения типов ClassCastException */
+        /* Car cb = (Car) bicycle; код завершится с ошибок приведения типов ClassCastException */
     }
 }
 
