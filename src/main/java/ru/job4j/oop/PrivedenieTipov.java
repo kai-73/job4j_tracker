@@ -2,7 +2,6 @@
 package ru.job4j.oop;
 
 public class PrivedenieTipov {
-
     public static void main(String[] args) {
         /* создаем объекта класса Car. */
         /*Car car = new Car(); */
