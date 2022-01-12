@@ -11,7 +11,7 @@ public class StartUI {
             System.out.print("Select: ");
             int select = scanner.nextInt();
             /**
-             * scanner.nextLine();баг java.
+             * scanner.nextLine(); баг java.
              * необходимо вставить после nextInt, иначе проскакивает следующий nextLine
              */
             if (select == 0) {
