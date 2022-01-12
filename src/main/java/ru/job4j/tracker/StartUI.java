@@ -10,7 +10,9 @@ public class StartUI {
             showMenu();
             System.out.print("Select: ");
             int select = scanner.nextInt();
-            /*scanner.nextLine();баг java. необходимо вставить после nextInt, иначе проскакивает следующий nextLine */
+            /**scanner.nextLine();баг java.
+             * необходимо вставить после nextInt, иначе проскакивает следующий nextLine
+             * */
             if (select == 0) {
                 System.out.println("=== Create a new Item ===");
                 System.out.print("Enter name: ");
