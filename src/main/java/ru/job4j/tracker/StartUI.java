@@ -55,6 +55,7 @@ public class StartUI {
                 System.out.print("Enter id: ");
                 int id = Integer.parseInt(scanner.nextLine());
                 Item item = tracker.findById(id);
+
                 if (item != null) {
                     System.out.println(item);
                 } else {
