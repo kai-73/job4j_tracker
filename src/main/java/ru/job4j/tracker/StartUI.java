@@ -9,7 +9,8 @@ public class StartUI {
         while (run) {
             showMenu();
             System.out.print("Select: ");
-            int select = scanner.nextInt();
+            int select = Integer.parseInt(scanner.nextLine());
+            /*  int select = scanner.nextInt(); */
             /* scanner.nextLine(); баг java. необходимо вставить после nextInt, иначе проскакивает следующий nextLine */
             if (select == 0) {
                 System.out.println(" === Create a new Item === ");
@@ -31,7 +32,7 @@ public class StartUI {
             } else if (select == 2) {
                 System.out.println("=== Edit item ===");
                 System.out.print("Enter id: ");
-                int id = scanner.nextInt();
+                int id = Integer.parseInt(scanner.nextLine());
                 System.out.print("Enter name: ");
                 String name = scanner.nextLine();
                 Item item = new Item(name);
@@ -43,7 +44,7 @@ public class StartUI {
             } else if (select == 3) {
                 System.out.println("=== Delete item ===");
                 System.out.print("Enter id: ");
-                int id = scanner.nextInt();
+                int id = Integer.parseInt(scanner.nextLine());
                 if (tracker.delete(id)) {
                     System.out.println("Заявка удалена успешно.");
                 } else {
