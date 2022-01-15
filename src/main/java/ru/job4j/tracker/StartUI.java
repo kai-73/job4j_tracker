@@ -10,6 +10,7 @@ public class StartUI {
             showMenu();
             System.out.print("Select: ");
             int select = Integer.parseInt(scanner.nextLine());
+
             /*  int select = scanner.nextInt(); */
             /* scanner.nextLine(); баг java. необходимо вставить после nextInt, иначе проскакивает следующий nextLine */
             if (select == 0) {
