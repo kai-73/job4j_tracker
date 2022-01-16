@@ -2,6 +2,9 @@ package ru.job4j.tracker;
 
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Этот класс управляет меню.
+ */
 public class StartUI1 {
 
     public static void main(String[] args) {
