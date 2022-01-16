@@ -3,6 +3,10 @@ package ru.job4j.tracker;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * Класс Item описывает модель заявки.
+ */
+
 public class Item {
 
     private int id;
