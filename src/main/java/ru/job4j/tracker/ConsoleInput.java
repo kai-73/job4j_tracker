@@ -14,6 +14,6 @@ public class ConsoleInput implements Input {
     @Override
     public int askInt(String question) {
         System.out.print(question);
-        return Integer.parseInt(scanner.nextLine());
+        return Integer.parseInt(askStr(question)); /* здесь в качестве параметра используем другой метод (вернее, возвращаемое значение другого метода */
     }
 }
