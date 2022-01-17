@@ -6,7 +6,7 @@ public class Tracker {
     /**
      * items - массив для хранения заявок.
      */
-    private final Item[] items = new Item[100];
+    private Item[] items = new Item[100];
     private int ids = 1;
     private int size = 0;
 
