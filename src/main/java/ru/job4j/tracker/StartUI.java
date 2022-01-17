@@ -1,7 +1,7 @@
 package ru.job4j.tracker;
 
 public class StartUI {
-    private boolean run;
+    //private boolean run;
 
     public static void createItem(Input input, Tracker tracker) {
         System.out.println(" === Create a new Item === ");
@@ -74,7 +74,7 @@ public class StartUI {
     }
 
     public void init(Input input, Tracker tracker) {
-        run = true;
+        boolean run = true;
         while (run) {
             showMenu();
             int select = input.askInt("Select: ");
