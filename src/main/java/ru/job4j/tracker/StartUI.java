@@ -1,4 +1,7 @@
 package ru.job4j.tracker;
+/**
+ * Этот класс управляет меню.
+ */
 
 public class StartUI {
 
@@ -107,6 +110,8 @@ public class StartUI {
     public static void main(String[] args) {
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
+        Item created = tracker.findAll()[0];
+        System.out.println(created);
         new StartUI().init(input, tracker); /*Поскольку дальше этот объект мы не будем переиспользовать*/
         /*то мы не записываем созданный объект в переменную и сразу на этом объекте вызываем метод init*/
     }
