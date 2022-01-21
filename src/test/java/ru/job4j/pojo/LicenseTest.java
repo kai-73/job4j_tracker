@@ -8,7 +8,7 @@ public class LicenseTest {
     @Test
     public void eqCode() {
         License first = new License("audi");
-        first.setCode("audi");
+        /* first.setCode("audi"); */
         License second = new License();
         second.setCode("audi");
         Assert.assertEquals(first, second);

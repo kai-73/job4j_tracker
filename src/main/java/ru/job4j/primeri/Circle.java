@@ -6,7 +6,7 @@ public class Circle {
 
     public Circle(double r) {
         radius = r;
-        color = "красный";
+    color = "красный";
     }
 
     public double getRadius() {

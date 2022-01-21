@@ -18,7 +18,7 @@ public class Matches {
                 turn = !turn;
             }
         }
-        outputWinner(turn);
+        new Matches().outputWinner(turn); /* так как метод не статик, нужно создать объект класса */
     }
 
     private static boolean controlOfRules(int matches, int count) {
@@ -38,7 +38,8 @@ public class Matches {
         return count - matches;
     }
 
-    private static void outputWinner(boolean winner) {
+    private void outputWinner(boolean winner) { /* пример -сделал метод не статик...тогда вызов этого
+     метода через создание объекта */
         if (!winner) {
             System.out.println("Выиграл первый игрок");
         } else {
