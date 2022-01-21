@@ -11,8 +11,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         StartUI.createItem(input, tracker);
         Item created = tracker.findAll()[0];
-        System.out.println(created);
         Item expected = new Item("Oleg");
-        assertEquals(created.getName(), expected.getName());
+        assertEquals(expected.getName(), created.getName());
     }
 }
