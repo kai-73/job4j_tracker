@@ -1,8 +1,7 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.Assert.*;
 
 public class StartUITest {
     @Test
@@ -34,10 +33,10 @@ public class StartUITest {
     public void whenDeleteItem() {
         Tracker tracker = new Tracker();
         Item item = new Item("new item", 1);
+        tracker.add(item);
         String[] answers = {Integer.toString(item.getId())};
         StartUI.deleteItem(new StubInput(answers), tracker);
         Item del = tracker.findById(Integer.parseInt(answers[0]));
-        System.out.println(del);
         assertNull(del);
     }
 }
