@@ -14,7 +14,7 @@ public class ConsoleInput implements Input {
     @Override
     public int askInt(String question) {
         System.out.print(question);
-        if (scanner.hasNextShort()) {
+        if (scanner.hasNextInt()) {
             return scanner.nextInt();
         } else {
             return 7;
