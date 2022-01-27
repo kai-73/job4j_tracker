@@ -2,11 +2,11 @@ package ru.job4j.strategy;
 
 public class Triangle implements Shape {
     @Override
-    public String draw() {
+    public void draw() {
         String ln = System.lineSeparator();
-             return " ________" + ln
-                  + "|        |" + ln
-                  + "|        |" + ln
-                  + "|________|" + ln;
+        System.out.println(" ________" + ln
+                         + "|        |" + ln
+                         + "|        |" + ln
+                         + "|________|" + ln);
     }
 }

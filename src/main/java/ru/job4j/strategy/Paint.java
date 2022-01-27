@@ -1,15 +1,21 @@
 package ru.job4j.strategy;
 
 public class Paint {
-    public static void draw(Shape shape) {
-        System.out.println(shape.draw());
+
+    public void draw(Shape shape) {
+        shape.draw();
+    }
+
+    Shape[] array = new Shape[1000];
+
+    public Shape[] add(Shape shape) {
+        Shape[] shapes = new Shape[1000];
+        return null;
     }
 
     public static void main(String[] args) {
-        Paint context = new Paint();
-        Shape triangle = new Triangle();
-        Shape square = new Square();
-        draw(triangle);
-        draw(square);
+        Paint paint = new Paint();
+        paint.draw(new Triangle());
+        paint.draw(new Square());
     }
 }
