@@ -13,6 +13,11 @@ public class ConsoleInput implements Input {
 
     @Override
     public int askInt(String question) {
-        return Integer.parseInt(askStr(question)); /* здесь в качестве параметра используем другой метод (вернее, возвращаемое значение другого метода */
+        System.out.print(question);
+        if (scanner.hasNextShort()) {
+            return scanner.nextInt();
+        } else {
+            return 7;
+        }
     }
 }
