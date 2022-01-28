@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-public class Idling implements UserAction  {
+public class Idling implements UserAction {
 
     @Override
     public String name() {

@@ -2,7 +2,7 @@ package ru.job4j.tracker;
 
 import java.util.Arrays;
 
-public class Tracker {
+public class Tracker  {
     /**
      * items - массив для хранения заявок.
      */
