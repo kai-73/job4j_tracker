@@ -5,6 +5,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.IsNull.nullValue;
 
+/**
+ * 5. Tracker - хранилище [#396 #247909]
+ */
 public class TrackerTest {
     @Test
     public void whenTestFindById() {
@@ -22,8 +25,10 @@ public class TrackerTest {
         Item second = new Item("Second");
         tracker.add(first);
         tracker.add(second);
-        Item result = tracker.findAll()[0];
-        assertThat(result.getName(), is(first.getName()));
+        Item[] items = tracker.findAll();
+        /* Item result = tracker.findAll()[0]; */
+        /* assertThat(result.getName(), is(first.getName())); */
+        assertThat(items[1].getName(), is(second.getName()));
     }
 
     @Test
