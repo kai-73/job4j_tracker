@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class InversArray {
     public static void main(String[] args) {
         int[] a = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        //int count = 0;
         for (int k = a.length / 2; k >= 0; k--) {
                     int tmp = a[k];
                     a[k] = a[k + 1];

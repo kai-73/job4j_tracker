@@ -3,7 +3,6 @@ package ru.job4j.tracker;
 /**
  * Этот класс управляет меню.
  */
-
 public class StartUI {
     private final Output out;
 
@@ -25,7 +24,7 @@ public class StartUI {
     private void showMenu(UserAction[] actions) {
         out.println("===== Menu:====");
         for (int index = 0; index < actions.length; index++) {
-            System.out.println(index + ". " + actions[index].name());
+            out.println(index + ". " + actions[index].name());
         }
     }
 
@@ -35,11 +34,11 @@ public class StartUI {
         Output output = new ConsoleOutput();
         UserAction[] actions = {
                 new CreateItem(output),
-                new ShowAllItems(),
-                new EditItem(),
-                new DeleteItem(),
-                new FindItemById(),
-                new FindItemByName(),
+                new ShowAllItems(output),
+                new EditItem(output),
+                new DeleteItem(output),
+                new FindItemById(output),
+                new FindItemByName(output),
                 new ExitProgram()
         };
         new StartUI(output).init(input, tracker, actions);

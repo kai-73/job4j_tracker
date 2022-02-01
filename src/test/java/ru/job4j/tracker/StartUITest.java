@@ -34,7 +34,7 @@ class StartUITest {
         Input in = new StubInput(answers);
         Output out = new StubOutput();
         UserAction[] actions = {
-                new EditItem(),
+                new EditItem(out),
                 new ExitProgram()
         };
         new StartUI(out).init(in, tracker, actions);
@@ -51,7 +51,7 @@ class StartUITest {
         Input in = new StubInput(answers);
         Output out = new StubOutput();
         UserAction[] actions = {
-                new DeleteItem(),
+                new DeleteItem(out),
                 new ExitProgram()
         };
         new StartUI(out).init(in, tracker, actions);
@@ -70,8 +70,6 @@ class StartUITest {
                 new ExitProgram()
         };
         new StartUI(out).init(in, tracker, actions);
-        assertThat(out.toString(), is(
-                "Menu." + System.lineSeparator() + "0. Exit" + System.lineSeparator()
-        ));
+        assertThat(out.toString(), is("===== Menu:====" + System.lineSeparator() + "0. Exit program" + System.lineSeparator()));
     }
 }
