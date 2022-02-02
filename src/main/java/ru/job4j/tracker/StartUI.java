@@ -12,7 +12,6 @@ public class StartUI {
 
     public void init(Input input, Tracker tracker, UserAction[] actions) {
         boolean run = true;
-
         while (run) {
             this.showMenu(actions);
             int select = input.askInt("Select: ");
@@ -39,7 +38,7 @@ public class StartUI {
                 new DeleteItem(output),
                 new FindItemById(output),
                 new FindItemByName(output),
-                new ExitProgram()
+                new ExitProgram(output)
         };
         new StartUI(output).init(input, tracker, actions);
     }
