@@ -13,6 +13,6 @@ public class Count {
     }
 
     public static void main(String[] args) {
-        System.out.println("Sum of 0 to 3 is : " + add(0, 3));
+        System.out.println("Sum of 0 to 3 is : " + add(10, 2));
     }
 }
