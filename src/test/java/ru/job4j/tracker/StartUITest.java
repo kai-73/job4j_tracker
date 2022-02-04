@@ -10,6 +10,7 @@ class StartUITest {
 
     @Test
     public void whenCreateItem() {
+
         String[] answers = {"0", "Item name", "1"};
         Input in = new StubInput(answers);
         Tracker tracker = new Tracker();
