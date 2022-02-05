@@ -170,6 +170,7 @@ class StartUITest {
         UserAction[] actions = {
                 new ExitProgram(out)
         };
+
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
         assertThat(out.toString(), is("===== Menu:====" + ln
