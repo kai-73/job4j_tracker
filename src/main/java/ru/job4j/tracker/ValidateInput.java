@@ -40,5 +40,4 @@ public class ValidateInput implements Input {
         }
         return true;
     }
-
 }
