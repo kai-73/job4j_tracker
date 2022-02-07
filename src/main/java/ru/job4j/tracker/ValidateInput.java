@@ -1,7 +1,6 @@
 package ru.job4j.tracker;
 
 public class ValidateInput implements Input {
-
     private final Output out;
     private final Input in;
 
@@ -28,16 +27,5 @@ public class ValidateInput implements Input {
             }
         } while (invalid);
         return value;
-    }
-
-    private boolean isNumber(String value) {
-        boolean rsl = true;
-        char[] check = value.toCharArray();
-        for (char c : check) {
-            if (c < 48 || c > 58) {
-                return false;
-            }
-        }
-        return true;
     }
 }
