@@ -34,7 +34,7 @@ public class ValidateInputTest {
         ValidateInput input = new ValidateInput(output, in);
         int[] selected = new int[answers.length];
         for (int i = 0; i < selected.length; i++) {
-            selected[i] = input.askInt("Enter menu:");
+            selected[i] = input.askInt("Все равно что");
             assertEquals(Integer.parseInt(answers[i]), selected[i]);
         }
     }
