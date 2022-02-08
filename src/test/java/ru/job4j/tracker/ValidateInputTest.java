@@ -32,11 +32,15 @@ public class ValidateInputTest {
         String[] answers = new String[]{"0", "1", "3", "10"};
         Input in = new StubInput(answers);
         ValidateInput input = new ValidateInput(output, in);
-        int[] selected = new int[answers.length];
-        for (int i = 0; i < selected.length; i++) {
-            selected[i] = input.askInt("Все равно что");
-            assertEquals(Integer.parseInt(answers[i]), selected[i]);
-        }
+
+        int selected1 = input.askInt("Все равно что");
+        assertEquals(0, selected1);
+        int selected2 = input.askInt("Все равно что");
+        assertEquals(1, selected2);
+        int selected3 = input.askInt("Все равно что");
+        assertEquals(3, selected3);
+        int selected4 = input.askInt("Все равно что");
+        assertEquals(10, selected4);
     }
 
     @Test
