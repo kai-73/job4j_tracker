@@ -4,7 +4,7 @@ public final class SingleTracker {
     private Tracker tracker = new Tracker();
     private static SingleTracker instance = null;
 
-    public SingleTracker() {
+    private SingleTracker() {
     }
 
     public static SingleTracker getInstance() {
